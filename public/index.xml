@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>You don’t start out strong. You get strong by starting on HJ Strength Coaching</title>
-    <link>/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content in You don’t start out strong. You get strong by starting on HJ Strength Coaching</description>
     <generator>Hugo</generator>
     <language>en-uk</language>
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>//localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/about/</guid>
+      <guid>//localhost:1313/about/</guid>
       <description>&lt;h2 id=&#34;ethos&#34;&gt;Ethos&lt;/h2&gt;&#xA;&lt;p&gt;At the heart of my coaching is a belief in clear, honest communication. I value openness, mutual respect, and working in partnership with the people I coach. You’ll always know where you stand, what we’re working on, and why it matters—no overcomplication, no ego.&lt;/p&gt;&#xA;&lt;p&gt;My background in statistics shapes how I approach training: with curiosity, structure, and a genuine love for problem-solving. I enjoy using data to guide decisions, planning with intention, and leaning into the strategy—especially when it comes to competition prep and game-day coaching.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Services</title>
-      <link>/services/</link>
+      <link>//localhost:1313/services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/services/</guid>
+      <guid>//localhost:1313/services/</guid>
       <description>&lt;h2 id=&#34;online-coaching&#34;&gt;Online Coaching&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Coming soon&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Online Coaching&lt;/strong&gt; is for powerlifters who want smart programming, consistent feedback, and real progress—without second-guessing their training. Whether you&amp;rsquo;re preparing for your first meet or pushing for a new total, this coaching is tailored to your goals, experience level, and day-to-day life.&lt;/p&gt;&#xA;&lt;p&gt;You&amp;rsquo;ll get fully customised programming designed to build strength where it counts, with weekly check-ins to review progress and adjust your plan as needed. Video feedback helps dial in technique, rep by rep—so you&amp;rsquo;re not just lifting more, you&amp;rsquo;re lifting better.&lt;/p&gt;</description>
     </item>
   </channel>
