@@ -6,4 +6,4 @@ image:
 
 ## Get in touch!
 
-Email me at [hj_strengthcoaching@gmail.com](mailto:hj_strengthcoaching@gmail.com) or reach out on [instagram](https://www.instagram.com/hj_strengthcoaching/) for further info. 
+Email me at [hjstrengthcoaching@gmail.com](mailto:hjstrengthcoaching@gmail.com) or reach out on [instagram](https://www.instagram.com/hj_strengthcoaching/) for further info. 
