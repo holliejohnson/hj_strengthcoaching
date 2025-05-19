@@ -70,3 +70,8 @@ pygmentsUseClasses = true
     identifier = "posts"
     weight = 4
     url = "/posts/"
+  [[menu.main]]
+    name = "Contact"
+    identifier = "contact"
+    weight = 5
+    url = "/contact/"
