@@ -1,7 +1,7 @@
 ---
 title: 'About'
 url: "/about/"
-image: images/about.jpg
+image: images/international.jpg
 ---
 
 ## Ethos
@@ -20,16 +20,13 @@ At the end of the day, I want coaching to feel like support, not pressure, such 
 
 Qualifications:
 
-<!-- - Certified **Level 2 Gym Instructor** and **Level 3 Personal Trainer**, providing a strong foundation in safe, effective coaching practices.
 - Qualified **Level 2 Powerlifting Coach**, with specific expertise in programming, technique, and meet-day preparation.
- -->
-- Qualified **Powerlifting Coach**, with specific expertise in programming, technique, and meet-day preparation.
 - Currently undertaking **Level 2 Gym Instructor** and **Level 3 Personal Trainer**, providing a strong foundation in safe, effective coaching practices.
 
 Experience & Roles:
 
 - **British Powerlifting Referee**, with extensive experience in the rules and structure of competitive lifting.
-- Active involvement in both coaching and competing within powerlifting, including experience at an international level.
+- Competed internationally in bench press for GB, earning **medals at the World Bench Press Championships** (silver 2017, bronze 2016). Has since coached at international level, including the World Bench Press Championships, European Championships, and the 2026 Small Nations Cup.
   
 Education & Continued Learning:
 

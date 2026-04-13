@@ -2,6 +2,12 @@
 
 {{ define "main" }}
 
+  {{ if .Params.image }}
+  <div class="hero">
+    <img src="{{ .Params.image | relURL }}" alt="{{ .Site.Title }}" />
+  </div>
+  {{ end }}
+
   {{ if .Site.Params.showAuthorOnHomepage }}
     {{ partial "author-large.html" . }}
   {{ end }}

@@ -43,15 +43,18 @@
   img {
     max-width: 100%;
   }
-  // img {
-  //   margin-right: -30px;
-  //   width: 100vw;
-  //   vertical-align: bottom;
-  //   @include breakpoint('small') {
-  //     margin-left: -100px;
-  //     margin-right: -100px;
-  //     margin-bottom: 50px;
-  //     width: auto;
-  //   }
-  // }
+}
+
+.hero {
+  margin-bottom: 50px;
+  img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    @include breakpoint('small') {
+      height: 560px;
+    }
+  }
 }
