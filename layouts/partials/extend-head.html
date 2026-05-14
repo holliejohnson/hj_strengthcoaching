@@ -23,7 +23,7 @@
 }
 </script>
 
-{{ if eq .URL "/about/" }}
+{{ if eq .RelPermalink "/about/" }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,7 +55,7 @@
 </script>
 {{ end }}
 
-{{ if eq .URL "/services/" }}
+{{ if eq .RelPermalink "/services/" }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
