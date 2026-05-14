@@ -1,0 +1,17 @@
+{{ define "body_classes" }}page-404{{ end }}
+
+{{ define "main" }}
+<div class="intro">
+  <h1>Page not found{{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}</h1>
+</div>
+<div class="content">
+  <p>Sorry, that page doesn't exist or may have moved.</p>
+  <p>Here are some helpful links:</p>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/services/">Services</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+</div>
+{{ end }}
