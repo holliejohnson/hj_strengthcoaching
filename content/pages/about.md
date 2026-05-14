@@ -3,6 +3,7 @@ title: 'About'
 url: "/about/"
 description: "Hollie Johnson — Level 2 qualified powerlifting coach and British Powerlifting Referee. Data-driven coaching in Newcastle upon Tyne and online UK-wide."
 image: images/international.jpg
+imageAltAttribute: "Hollie Johnson competing at an international powerlifting championship"
 ---
 
 ## Ethos
@@ -34,3 +35,5 @@ Education & Continued Learning:
 - Holds a **PhD in Statistics**, supporting a data-driven, analytical approach to coaching decisions.
 - Completed **NSPCC 'Child Protection in Sport & Physical Activity'** training, ensuring safe and appropriate coaching environments for all athletes.
 - Completed the **ADEL (Anti-Doping Education & Learning) Coaches of High Performance Program**, reflecting a commitment to clean sport and ethical coaching practices.
+
+Interested in working together? [View my coaching services](/services/).

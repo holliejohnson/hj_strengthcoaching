@@ -3,6 +3,7 @@ title: 'Services'
 url: "/services/"
 description: "Online, hybrid, and in-person powerlifting coaching with Hollie Johnson in Newcastle, North East UK. For competitors and general strength training."
 image: images/competition.jpg
+imageAltAttribute: "Powerlifting competition — British Powerlifting meet"
 ---
 
 ## 1:1 Coaching

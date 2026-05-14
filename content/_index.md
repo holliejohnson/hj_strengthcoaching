@@ -2,6 +2,7 @@
 title: You don’t need to be strong to begin
 description: "Hollie Johnson — qualified powerlifting and strength coach in Newcastle upon Tyne. Online and in-person coaching for British Powerlifting and IPF lifters."
 image: images/hero.jpg
+imageAltAttribute: "Hollie Johnson powerlifting — competing at a British Powerlifting meet"
 ---
 
 **You don’t need to be strong to begin, just ready to show up.** 
