@@ -2,3 +2,120 @@
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- /* Head custom content area end */ -}}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "HJ Strength Coaching",
+  "url": "{{ .Site.BaseURL }}",
+  "email": "hjstrengthcoaching@gmail.com",
+  "description": "Qualified powerlifting and strength coach in Newcastle upon Tyne. Online and in-person coaching for British Powerlifting, IPF lifters, and strength training across the UK.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Newcastle upon Tyne",
+    "addressRegion": "North East England",
+    "addressCountry": "GB"
+  },
+  "areaServed": ["Newcastle upon Tyne", "North East England", "United Kingdom"],
+  "priceRange": "££",
+  "sameAs": ["https://www.instagram.com/hj_strengthcoaching/"]
+}
+</script>
+
+{{ if eq .URL "/about/" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hollie Johnson",
+  "url": "{{ .Permalink }}",
+  "jobTitle": "Powerlifting Coach",
+  "description": "Level 2 qualified powerlifting coach, British Powerlifting Referee, and GB international. Data-driven coaching in Newcastle upon Tyne and online UK-wide.",
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Level 2 Powerlifting Coach"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "British Powerlifting Referee"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "PhD in Statistics"
+    }
+  ],
+  "affiliation": {
+    "@type": "Organization",
+    "name": "British Powerlifting"
+  },
+  "sameAs": ["https://www.instagram.com/hj_strengthcoaching/"]
+}
+</script>
+{{ end }}
+
+{{ if eq .URL "/services/" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "HJ Strength Coaching",
+  "url": "{{ .Permalink }}",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Powerlifting Coaching Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Online Coaching",
+          "description": "Fully individualised powerlifting programme with weekly check-ins, video technique feedback, and competition planning for British Powerlifting and IPF lifters."
+        },
+        "price": "120",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "120",
+          "priceCurrency": "GBP",
+          "unitText": "month"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hybrid Coaching",
+          "description": "Online coaching plus two in-person sessions per month in Newcastle upon Tyne. Ideal for new lifters and those preparing for competition."
+        },
+        "price": "200",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "200",
+          "priceCurrency": "GBP",
+          "unitText": "month"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "In-Person Technique Session",
+          "description": "One-hour in-person technique session in Newcastle upon Tyne, focused on one or two competition lifts."
+        },
+        "price": "55",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "55",
+          "priceCurrency": "GBP",
+          "unitText": "session"
+        }
+      }
+    ]
+  }
+}
+</script>
+{{ end }}

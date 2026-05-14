@@ -3,6 +3,7 @@ languageCode = "en-uk"
 theme = "hugo-winston-theme"
 themesDir = "themes"
 title = "HJ Strength Coaching"
+enableRobotsTXT = true
 pagination.pagerSize = 3
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
@@ -36,6 +37,11 @@ pygmentsUseClasses = true
   fontFamilyHeading = "Poppins"
   fontFamilyParagraph = "Helvetica"
   fontFamilyMonospace = "Helvetica"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
 [caches]
   [caches.images]

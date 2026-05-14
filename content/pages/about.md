@@ -1,6 +1,7 @@
 ---
 title: 'About'
 url: "/about/"
+description: "Level 2 qualified powerlifting coach, British Powerlifting Referee, and GB international. Data-driven coaching in Newcastle upon Tyne and online UK-wide."
 image: images/international.jpg
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: 'Contact'
 url: "/contact/"
+description: "Get in touch to start powerlifting coaching with Hollie Johnson — qualified coach based in Newcastle, North East. Online and in-person enquiries welcome."
 image: 
 ---
 

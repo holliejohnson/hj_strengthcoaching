@@ -1,6 +1,7 @@
 ---
 title: 'Services'
 url: "/services/"
+description: "Online, hybrid, and in-person strength and powerlifting coaching in Newcastle, North East UK. Programmes for competitors and general strength training."
 image: images/competition.jpg
 ---
 

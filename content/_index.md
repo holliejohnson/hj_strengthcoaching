@@ -1,6 +1,6 @@
 ---
 title: You don’t need to be strong to begin
-description: 
+description: "Qualified powerlifting and strength coach in Newcastle upon Tyne. Online and in-person coaching for British Powerlifting, IPF lifters, and strength training."
 image: images/hero.jpg
 ---
 
