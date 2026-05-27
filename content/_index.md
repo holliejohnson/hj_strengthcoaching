@@ -1,16 +1,16 @@
 ---
-title: You don’t need to be strong to begin
+title: Powerlifting coaching for curious lifters
 description: "Hollie Johnson — qualified powerlifting and strength coach in Newcastle upon Tyne. Online and in-person coaching for British Powerlifting and IPF lifters."
 image: images/hero.jpg
-imageAltAttribute: "Hollie Johnson powerlifting — competing at a British Powerlifting meet"
+imageAltAttribute: "Hollie Johnson powerlifting — competing at a British Powerlifting competition."
 ---
 
-**You don’t need to be strong to begin, just ready to show up.** 
+**Data-driven 1:1 coaching for powerlifting competitors - and lifters preparing for their first competition.** 
 
-And if you’re reading this, you are.
+Whether you're preparing for your first meet or chasing a bigger total, you deserve programming that adapts to your training data, your body, and your life, not a template someone else wrote three years ago.
 
-Whether you’re pursuing ambitious powerlifting goals, starting from scratch or rebuilding strength after a break, the process works the same: one step, one rep, one session at a time. 
+Every week I review all your data, including velocity, volume, intensity and anything else that we're tracking. Assessing these alongside subjective data such as readiness and recovery, as well as your check-in and video feedback, I'll adjust your training as needed. I provide human-centered, data-driven coaching that gets you stronger. 
 
-At HJ Strength Coaching, I care about the process at a human level, taking into account everything that life can throw at you. But I also bring a highly technical and analytical approach to programming and coaching, influenced by years of experience and a deep understanding of data. 
+I'm a British Powerlifting competitor myself. When it comes to attempt selection, comp-day logistics, and the details that can make or break a platform performance, I've been there. 
 
-Strength built through powerlifting builds confidence, carries over into life and stays with you, whatever your goals. 
+[See coaching options →](../services)
