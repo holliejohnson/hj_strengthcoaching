@@ -1,14 +1,16 @@
 {{ define "body_classes" }}page-default-single{{ end }}
 
+{{/* Generic fallback for any page that doesn't set a bespoke layout.
+     Renders the title + markdown body in the refreshed prose style. */}}
 {{ define "main" }}
-<div class="intro">
-  <h1>{{ .Title }}{{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}</h1>
-  {{ if .Params.image }}
-  <img alt="{{.Params.imageAltAttribute | default "Article hero image"}}" src="{{ .Params.image | relURL }}" />
-  {{ end }}
-</div>
-
-<div class="content">
-  {{ .Content }}
-</div>
+  <section class="hj-section">
+    <span class="hj-eyebrow">{{ .Site.Title }}</span>
+    <h1 class="hj-h2">{{ .Title }}<span class="dot">.</span></h1>
+    {{ if .Params.image }}
+      <div class="hj-card__img" style="border-radius:var(--radius-lg);margin:28px 0;max-height:420px">
+        <img src="{{ .Params.image | relURL }}" alt="{{ .Params.imageAltAttribute | default .Title }}" />
+      </div>
+    {{ end }}
+    <div class="hj-prose" style="margin-top:28px">{{ .Content }}</div>
+  </section>
 {{ end }}

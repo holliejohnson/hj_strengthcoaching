@@ -1,14 +1,29 @@
 {{ define "body_classes" }}page-blog-list{{ end }}
 
 {{ define "main" }}
-  <div class="intro">
-    <h1>{{ .Title }}{{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}</h1>
-    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
-  </div>
-  {{ .Content }}
-  {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-  {{ range $paginator.Pages }}
-    {{ .Render "summary" }}
-  {{ end }}
-  {{ partial "paginator" . }}
+  <section class="hj-section" style="padding-bottom:8px">
+    <span class="hj-eyebrow">Writing</span>
+    <h1 class="hj-h2">Posts<span class="dot">.</span></h1>
+    {{ with .Params.description }}<p class="hj-lead" style="margin-top:22px">{{ . }}</p>{{ end }}
+  </section>
+
+  <section class="hj-section" style="padding-top:32px">
+    {{ range (where .Pages "Type" "posts") }}
+      <a class="hj-feature" href="{{ .RelPermalink }}">
+        <div class="hj-feature__img">
+          {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Params.imageAltAttribute | default $.Title }}" />{{ end }}
+        </div>
+        <div class="hj-feature__body">
+          {{ with .Params.tags }}
+            <div class="hj-feature__tags">
+              {{ range first 2 . }}<span class="hj-badge hj-badge--ink">{{ . }}</span>{{ end }}
+            </div>
+          {{ end }}
+          <h3>{{ .Title }}</h3>
+          <p class="hj-feature__excerpt">{{ .Params.description | default .Summary | truncate 150 }}</p>
+          <span class="hj-feature__meta">{{ .Date.Format "2 January 2006" }} · {{ .ReadingTime }} min read</span>
+        </div>
+      </a>
+    {{ end }}
+  </section>
 {{ end }}

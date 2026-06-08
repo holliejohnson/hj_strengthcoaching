@@ -1,7 +1,7 @@
 :root {
-  --font-family-heading: Poppins;
-  --font-family-paragraph: Helvetica;
-  --font-family-monospace: Helvetica;
+  --font-family-heading: 'League Spartan', 'Arial Narrow', sans-serif;
+  --font-family-paragraph: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-monospace: 'Jost', monospace;
   --base-color: #ffffff;
   --base-offset-color: #eaeaea;
   --highlight-color: #FF5964;
@@ -273,6 +273,17 @@ ul {
   .intro img {
     max-width: 100%; }
 
+.hero {
+  margin-bottom: 50px; }
+  .hero img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block; }
+    @media (min-width: 767px) {
+      .hero img {
+        height: 560px; } }
 .summary {
   margin-bottom: 50px;
   font-size: 18px;
@@ -398,7 +409,8 @@ ul.pagination {
       margin-right: 10px; }
       .menu-main > ul > li > a {
         display: inline-block;
-        text-decoration: none; }
+        text-decoration: none;
+        text-transform: uppercase; }
         .menu-main > ul > li > a:hover {
           text-decoration: underline; }
       .menu-main > ul > li.active > a {

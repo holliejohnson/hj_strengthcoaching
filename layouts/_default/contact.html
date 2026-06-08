@@ -1,0 +1,23 @@
+{{ define "body_classes" }}page-default-single page-contact{{ end }}
+
+{{ define "main" }}
+  <section class="hj-contact">
+    <div class="hj-contact__left">
+      <span class="hj-eyebrow">Contact</span>
+      <h1 class="hj-h2">Get in touch<span class="dot">.</span></h1>
+      <p class="hj-lead">Interested in coaching? Fill in the enquiry form and I'll get back to you within 48 hours. To book a free consultation call, or for anything else, email me or reach out on Instagram.</p>
+      <div class="hj-contact__links">
+        <a href="mailto:hjstrengthcoaching@gmail.com">hjstrengthcoaching@gmail.com</a>
+        <a href="https://www.instagram.com/hj_strengthcoaching/" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+          @hj_strengthcoaching
+        </a>
+      </div>
+    </div>
+    <div class="hj-contact__right">
+      <h3>Enquiry form<span class="dot">.</span></h3>
+      <p>The quickest way to start. Tell me a little about your training and your goals, and I'll be in touch within 48 hours.</p>
+      <a class="hj-btn hj-btn--lg" href="{{ .Params.enquiry_form_url | default "https://docs.google.com/forms/d/e/1FAIpQLSd-FVol752osYhAsL0yaYjgHhTicf_ojxNG19pInoMeFLVL4Q/viewform?usp=dialog" }}" target="_blank" rel="noopener">Open the enquiry form <span class="arrow">→</span></a>
+    </div>
+  </section>
+{{ end }}
