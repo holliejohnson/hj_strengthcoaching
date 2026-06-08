@@ -1,21 +1,26 @@
-<div class='header'>
-  <a class="header-logo" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
-  <div class="menu-main">
-    <ul>
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
+{{- /* HJ Strength Coaching — refreshed top navigation.
+       Keeps the theme's mobile hooks (#toggle-menu-main-mobile / .hamburger)
+       so scripts.js + menu-main-mobile.html keep working untouched. */ -}}
+<header class="hj-nav">
+  <a class="hj-logo" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Title }} — home">
+    <img src="/images/logo.png" alt="{{ .Site.Title }}" />
+    <span class="hj-logo-dot" aria-hidden="true"></span>
+  </a>
+
+  <ul class="hj-nav-links">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
       {{ $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
       {{ $active = or $active (eq (.URL | relLangURL) ($currentPage.RelPermalink | relLangURL)) }}
-      <li class="menu-item-{{ .Name | lower }} {{ if $active }}active{{ end }}">
-        <a href="{{.URL}}">
-          {{ .Pre }}
-          <span>{{ .Name }}</span>
-        </a>
+      <li class="menu-item-{{ .Name | lower }}{{ if $active }} active{{ end }}">
+        <a href="{{ .URL }}">{{ .Name }}</a>
       </li>
-      {{end}}
-    </ul>
-  </div>
+    {{ end }}
+  </ul>
+
+  <a class="hj-btn hj-btn--sm hj-nav-cta" href="/contact/">Enquire</a>
+
   <div id="toggle-menu-main-mobile" class="hamburger-trigger">
     <button class="hamburger">Menu</button>
   </div>
-</div>
+</header>

@@ -1,0 +1,45 @@
+{{ define "body_classes" }}page-default-single page-about{{ end }}
+
+{{ define "main" }}
+  {{/* ── Split intro ──────────────────────────────────── */}}
+  <section class="hj-split">
+    <div class="hj-split__img">
+      {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Params.imageAltAttribute | default "Hollie Johnson" }}" />{{ end }}
+    </div>
+    <div class="hj-split__body">
+      <span class="hj-eyebrow">About</span>
+      <h1 class="hj-h2">Hollie Johnson<span class="dot">.</span></h1>
+      <p class="hj-lead">Level 2 powerlifting coach, British Powerlifting referee, and former GB international bench presser. A PhD in statistics shapes how I coach: with curiosity, structure, and a genuine love for problem-solving.</p>
+      <div class="hj-badges">
+        <span class="hj-badge hj-badge--accent">British Powerlifting</span>
+        <span class="hj-badge hj-badge--ink">GB international</span>
+        <span class="hj-badge hj-badge--ink">PhD statistics</span>
+      </div>
+      <div style="margin-top:26px"><a class="hj-btn" href="/services/">View coaching services <span class="arrow">→</span></a></div>
+    </div>
+  </section>
+
+  {{/* ── Ethos (prose from about.md body) ─────────────── */}}
+  <section class="hj-section" style="max-width:760px">
+    <span class="hj-eyebrow">Ethos</span>
+    <h2 class="hj-h2 hj-h2--sm" style="margin-bottom:24px">I coach people, not just performance<span class="dot">.</span></h2>
+    <div class="hj-prose">{{ .Content }}</div>
+    <blockquote class="hj-quote">
+      <p>I want coaching to feel like support, not pressure — strength built with intention, flexibility and trust.</p>
+    </blockquote>
+  </section>
+
+  {{/* ── Qualifications (from front matter .Params.credentials) ── */}}
+  <section class="hj-band">
+    <span class="hj-eyebrow hj-eyebrow--light">Coach profile</span>
+    <h2 class="hj-h2 hj-h2--sm" style="color:#fff">Qualifications &amp; experience<span class="dot">.</span></h2>
+    <div class="hj-quals">
+      {{ range .Params.credentials }}
+        <div class="hj-qual">
+          <div class="hj-qual__h">{{ .heading }}</div>
+          <ul>{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

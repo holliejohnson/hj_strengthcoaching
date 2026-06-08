@@ -1,12 +1,10 @@
 ---
 title: 'Contact'
 url: "/contact/"
+layout: contact
 description: "Get in touch to start powerlifting coaching with Hollie Johnson — qualified coach based in Newcastle, North East. Online and in-person enquiries welcome."
-image: 
+image:
+enquiry_form_url: "https://docs.google.com/forms/d/e/1FAIpQLSd-FVol752osYhAsL0yaYjgHhTicf_ojxNG19pInoMeFLVL4Q/viewform?usp=dialog"
 ---
 
-## Get in touch.
-
-Interested in online coaching? [Fill in the enquiry form](https://docs.google.com/forms/d/e/1FAIpQLSd-FVol752osYhAsL0yaYjgHhTicf_ojxNG19pInoMeFLVL4Q/viewform?usp=dialog) and I'll get back to you.
-
-To book a free consultation call, or for anything else, email me at [hjstrengthcoaching@gmail.com](mailto:hjstrengthcoaching@gmail.com) or reach out on [instagram](https://www.instagram.com/hj_strengthcoaching/). 
+Interested in online coaching? Fill in the enquiry form and I'll get back to you. To book a free consultation call, or for anything else, email me or reach out on Instagram.

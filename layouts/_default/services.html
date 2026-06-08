@@ -1,0 +1,59 @@
+{{ define "body_classes" }}page-default-single page-services{{ end }}
+
+{{ define "main" }}
+  <section class="hj-section" style="padding-bottom:0">
+    <span class="hj-eyebrow">Services</span>
+    <h1 class="hj-h2">1:1 Coaching<span class="dot">.</span></h1>
+    <p class="hj-lead" style="margin-top:22px">Coaching tailored to your goals, experience and day-to-day life. Pick the level of support that fits.</p>
+  </section>
+
+  {{/* ── Pricing tiers (from front matter .Params.tiers) ── */}}
+  <section class="hj-section" style="padding-top:48px">
+    <div class="hj-tiers">
+      {{ range .Params.tiers }}
+        <div class="hj-tier{{ if .featured }} hj-tier--featured{{ end }}">
+          {{ if .featured }}<span class="hj-tier__badge">Most popular</span>{{ end }}
+          <h3 class="hj-tier__name">{{ .name }}</h3>
+          <div class="hj-tier__price">{{ .price }} <span>{{ .period }}</span></div>
+          <p class="hj-tier__blurb">{{ .blurb }}</p>
+          <ul class="hj-tier__features">
+            {{ range .features }}<li>{{ . }}</li>{{ end }}
+          </ul>
+          <a class="hj-btn{{ if not .featured }} hj-btn--secondary{{ end }}" href="/contact/">{{ .cta | default "Apply" }} <span class="arrow">→</span></a>
+        </div>
+      {{ end }}
+    </div>
+    <p class="hj-note">Note: If cost is prohibitive, I offer significant discounts for students and low-income athletes - just get in touch.</p>
+  </section>
+
+  {{/* ── How it works ─────────────────────────────────── */}}
+  <section class="hj-band">
+    <span class="hj-eyebrow hj-eyebrow--light">Getting started</span>
+    <h2 class="hj-h2 hj-h2--sm" style="color:#fff">How it works<span class="dot">.</span></h2>
+    <div class="hj-steps">
+      {{ range slice (dict "n" "01" "t" "Get in touch" "d" "Fill in the enquiry form or drop me an email.") (dict "n" "02" "t" "We talk it through" "d" "A chat over Zoom, email or WhatsApp — whatever works for you.") (dict "n" "03" "t" "You start training" "d" "Your programme lands and we get to work.") }}
+        <div class="hj-step" style="border-top-color:var(--hj-coral)">
+          <div class="hj-step__n">{{ .n }}</div>
+          <h4 style="color:#fff">{{ .t }}</h4>
+          <p style="color:rgba(255,255,255,.78)">{{ .d }}</p>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  {{/* ── Classes & workshops ──────────────────────────── */}}
+  <section class="hj-section">
+    <span class="hj-eyebrow">Beyond 1:1</span>
+    <h2 class="hj-h2 hj-h2--sm">Classes &amp; workshops<span class="dot">.</span></h2>
+    <div class="hj-cards" style="grid-template-columns:1fr 1fr">
+      {{ range .Params.classes }}
+        <div class="hj-card" style="padding:30px">
+          <span class="hj-badge hj-badge--ink" style="align-self:flex-start">{{ .tag }}</span>
+          <h3 class="hj-card__title" style="margin-top:14px">{{ .name }}</h3>
+          <p class="hj-card__text">{{ .text }}</p>
+          {{ with .url }}<a class="hj-btn hj-btn--ghost" href="{{ . }}" target="_blank" rel="noopener" style="margin-top:6px">Book <span class="arrow">→</span></a>{{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

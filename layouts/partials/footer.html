@@ -1,13 +1,29 @@
-<div class="footer">
-  {{ if .Site.Data.social.links }}
-  <div class="footer-social">
-    {{ range .Site.Data.social.links }}
-      <span class="social-icon social-icon-{{ .name | urlize }}">
-        <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener">
-          <img src="{{ .image | relURL }}" width="24" height="24" alt="{{ .name }}"/>
+{{- /* HJ Strength Coaching — refreshed footer (ink panel). */ -}}
+<footer class="hj-footer">
+  <div class="hj-footer__top">
+    <div class="hj-footer__brand">
+      <img src="/images/logo.png" alt="{{ .Site.Title }}" />
+      <p>Human-centred, data-driven powerlifting coaching in Newcastle upon Tyne and online, UK-wide.</p>
+    </div>
+    <div class="hj-footer__cols">
+      <div class="hj-footer__col">
+        <h5>Explore</h5>
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </div>
+      <div class="hj-footer__col">
+        <h5>Get in touch</h5>
+        <a href="mailto:hjstrengthcoaching@gmail.com">hjstrengthcoaching@gmail.com</a>
+        <a href="https://www.instagram.com/hj_strengthcoaching/" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+          @hj_strengthcoaching
         </a>
-      </span>
-    {{ end }}
+      </div>
+    </div>
   </div>
-  {{ end }}
-</div>
+  <div class="hj-footer__bottom">
+    <span>© {{ now.Year }} {{ .Site.Title }} · Newcastle upon Tyne</span>
+    <span>Get stronger<span class="dot">.</span> whatever your circumstances</span>
+  </div>
+</footer>

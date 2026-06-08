@@ -1,51 +1,83 @@
 {{ define "title" }}Hollie Johnson | Powerlifting Coach Newcastle{{ end }}
-
 {{ define "body_classes" }}page-home{{ end }}
 
 {{ define "main" }}
 
-  {{ if .Params.image }}
-  <div class="hero">
-    <img src="{{ .Params.image | relURL }}" alt="{{ .Site.Title }}" />
-  </div>
-  {{ end }}
+  {{/* ── Hero ─────────────────────────────────────────── */}}
+  <section class="hj-hero">
+    {{ with .Params.image }}<img class="hj-hero__img" src="{{ . | relURL }}" alt="{{ $.Params.imageAltAttribute | default $.Site.Title }}" />{{ end }}
+    <div class="hj-hero__scrim"></div>
+    <div class="hj-hero__top">
+      <span class="hj-hero__rule"></span>
+      <span class="hj-eyebrow hj-eyebrow--light">Newcastle upon Tyne · Online UK-wide</span>
+    </div>
+    <div class="hj-hero__body">
+      <h1>{{ .Params.hero_heading | default "Get stronger. whatever your circumstances" | safeHTML }}</h1>
+      <p>{{ .Params.hero_sub | default "Data-driven 1:1 powerlifting coaching — for competitors chasing a bigger total, and lifters preparing for their first meet." }}</p>
+      <div class="hj-hero__cta">
+        <a class="hj-btn hj-btn--lg" href="/services/">See coaching options <span class="arrow">→</span></a>
+        <a class="hj-btn hj-btn--lg hj-btn--inverse" href="/about/">Meet Hollie</a>
+      </div>
+    </div>
+  </section>
 
-  {{ if .Site.Params.showAuthorOnHomepage }}
-    {{ partial "author-large.html" . }}
-  {{ end }}
+  {{/* ── Intro prose (from _index.md body) ────────────── */}}
+  <section class="hj-section">
+    <span class="hj-eyebrow">The approach</span>
+    <h2 class="hj-h2 hj-h2--sm" style="margin-bottom:28px">Human-centred, data-driven<span class="dot">.</span></h2>
+    <div class="hj-prose">{{ .Content }}</div>
+  </section>
 
-  <div class="intro">
-    <h1>{{ .Title }}{{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}</h1>
-    {{ if .Site.Params.showIntroContentOnHomepage}}
-      <div class="intro-content">{{ .Content }}</div>
-    {{ end }}
-  </div>
-
-  {{ if .Site.Params.showPostsOnHomepage }}
-
-    {{ $pages := where .Site.RegularPages "Type" "posts" }}
-    {{ $sorted := ($pages.ByParam "date").Reverse }}
-    {{ if .Site.Params.sortPostsByDateOldestFirst }}
-      {{ $sorted = $pages.ByParam "date" }}
-    {{ end }}
-
-    {{ $paginator := .Paginate $sorted }}
-
-    {{ if .Site.Params.usePaginationOnHomepage }}
-      {{ range $paginator.Pages }}
-        {{ .Render "summary" }}
+  {{/* ── Credentials strip ────────────────────────────── */}}
+  <section class="hj-band">
+    <span class="hj-eyebrow hj-eyebrow--light">By the numbers</span>
+    <div class="hj-stats">
+      {{ range slice (dict "v" "2x" "l" "World medals") (dict "v" "PhD" "l" "In statistics") (dict "v" "L2" "l" "Qualified coach") (dict "v" "BP" "l" "Referee") }}
+        <div class="hj-stat">
+          <div class="hj-stat__value">{{ .v }}</div>
+          <div class="hj-stat__label">{{ .l }}</div>
+        </div>
       {{ end }}
-      {{ partial "paginator" . }}
-    {{ else }}
-      {{ $limit := .Site.Params.limitPostsOnHomepage | default 3 }}
-      {{ range first $limit $sorted}}
-        {{ .Render "summary" }}
+    </div>
+  </section>
+
+  {{/* ── Services preview ─────────────────────────────── */}}
+  <section class="hj-section">
+    <div class="hj-head-row">
+      <div>
+        <span class="hj-eyebrow">Ways to work together</span>
+        <h2 class="hj-h2">Coaching options<span class="dot">.</span></h2>
+      </div>
+      <a class="hj-btn hj-btn--ghost" href="/services/">All services <span class="arrow">→</span></a>
+    </div>
+    <div class="hj-cards">
+      {{ range slice (dict "img" "/images/competition.jpg" "e" "Online" "t" "1:1 Coaching" "p" "Fully individualised programming, weekly check-ins and video feedback." "price" "£120 / month") (dict "img" "/images/about.jpg" "e" "Hybrid" "t" "Online + in person" "p" "Everything online, plus two 1h in-person technique sessions a month." "price" "£200 / month") (dict "img" "/images/deadlift.jpg" "e" "One-off" "t" "Technique session" "p" "One hour, one or two lifts, dialled right in." "price" "£55 / session") }}
+        <a class="hj-card" href="/services/">
+          <div class="hj-card__img"><img src="{{ .img }}" alt="{{ .t }}" /></div>
+          <div class="hj-card__body">
+            <span class="hj-eyebrow">{{ .e }}</span>
+            <h3 class="hj-card__title">{{ .t }}</h3>
+            <p class="hj-card__text">{{ .p }}</p>
+            <div class="hj-card__footer">
+              <span class="hj-card__price">{{ .price }}</span>
+              <span class="hj-btn hj-btn--sm hj-btn--ghost">Details <span class="arrow">→</span></span>
+            </div>
+          </div>
+        </a>
       {{ end }}
-      <a class="view-more" href="/posts">More Posts</a>
-    {{ end }}
-  {{ end }}
+    </div>
+  </section>
+
+  {{/* ── Closing CTA ──────────────────────────────────── */}}
+  <section class="hj-section" style="padding-top:0">
+    <div class="hj-cta">
+      <span class="hj-eyebrow">Ready when you are</span>
+      <h2 class="hj-h2">Let's build a stronger you<span class="dot">.</span></h2>
+      <p class="hj-lead">Book a free consultation call, or fill in the enquiry form and I'll get back to you within 48 hours.</p>
+      <a class="hj-btn hj-btn--lg" href="/contact/">Get in touch <span class="arrow">→</span></a>
+    </div>
+  </section>
 
 {{ end }}
 
-{{ define "footer_js" }}
-{{ end }}
+{{ define "footer_js" }}{{ end }}

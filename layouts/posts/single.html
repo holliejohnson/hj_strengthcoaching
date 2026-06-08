@@ -13,25 +13,35 @@
   <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"/>
   {{ if .Lastmod }}<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}"/>{{ end }}
   <meta name="twitter:card" content="summary"/>
-  {{ if .Site.Params.twitter_handle }}<meta name="twitter:site" content="{{ .Site.Params.twitter_handle }}"/>{{ end }}
-  {{ if .Site.Params.twitter_handle }}<meta name="twitter:creator" content="{{ .Site.Params.twitter_handle }}"/>{{ end }}
 {{ end }}
 
 {{ define "body_classes" }}page-blog-single{{ end }}
 
 {{ define "main" }}
-  <div class="blog">
-    {{ if .Site.Params.showAuthorOnPosts }}
-      {{ partial "author.html" . }}
-    {{ end }}
-    <div class="intro">
-      <h1>{{ .Title }}{{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}</h1>
-      {{ if .Params.image }}
-      <img alt="{{.Params.imageAltAttribute | default "Article hero image"}}" src="{{ .Params.image | relURL }}" />
-      {{ end }}
+  <article>
+    <div class="hj-article__hero">
+      {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Params.imageAltAttribute | default $.Title }}" />{{ end }}
+      <div class="hj-hero__scrim"></div>
+      <div class="hj-article__hero-body">
+        {{ with .Params.tags }}<span class="hj-eyebrow hj-eyebrow--light">{{ delimit (first 2 .) " · " }}</span>{{ end }}
+        <h1>{{ .Title }}<span class="dot">.</span></h1>
+      </div>
     </div>
-    <div class="content">
-      {{ .Content }}
+
+    <div class="hj-article">
+      <div class="hj-article__meta-row">
+        <a class="hj-article__back" href="/posts/">← All posts</a>
+        <span class="hj-article__byline">By Hollie Johnson · {{ .Date.Format "2 January 2006" }} · {{ .ReadingTime }} min read</span>
+      </div>
+
+      <div class="hj-article__content">
+        {{ .Content }}
+      </div>
+
+      <div class="hj-inline-cta">
+        <p>If you're working towards your first meet, or trying to put together a stronger one than last time, that's precisely the sort of thing coaching is useful for.</p>
+        <a class="hj-btn" href="/contact/">Get in touch <span class="arrow">→</span></a>
+      </div>
     </div>
-  </div>
+  </article>
 {{ end }}
