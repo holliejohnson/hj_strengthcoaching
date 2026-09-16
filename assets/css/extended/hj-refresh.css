@@ -180,8 +180,8 @@ h1, h2, h3, h4 {
   margin-bottom: 0;
   border-bottom: 1px solid var(--color-border);
 }
-.hj-logo { display: flex; align-items: flex-end; gap: 7px; }
-.hj-logo img { height: 30px; display: block; }
+.hj-logo { display: flex; align-items: center; gap: 7px; }
+.hj-logo img { height: 36px; width: auto; display: block; }
 .hj-logo .hj-logo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--hj-coral); margin-bottom: 4px; }
 
 .hj-nav-links { display: flex; gap: 30px; align-items: center; list-style: none; margin: 0; padding: 0; }
@@ -395,7 +395,7 @@ h1, h2, h3, h4 {
 .hj-footer { background: var(--hj-ink); color: #fff; border-radius: var(--radius-lg); padding: 64px 48px 36px; margin-top: 30px; }
 .hj-footer__top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 44px; }
 .hj-footer__brand { max-width: 340px; }
-.hj-footer__brand img { height: 30px; filter: invert(1); margin-bottom: 18px; }
+.hj-footer__brand img { height: 30px; margin-bottom: 18px; }
 .hj-footer__brand p { font-family: var(--font-body); font-size: 15px; line-height: 1.65; color: rgba(255,255,255,.62); margin: 0; }
 .hj-footer__cols { display: flex; gap: 64px; flex-wrap: wrap; }
 .hj-footer__col h5 { font-family: var(--font-heading); font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--hj-coral); margin: 0 0 16px; }

@@ -1,6 +1,6 @@
 ---
 title: Powerlifting coaching for curious lifters
-description: "Hollie Johnson — qualified powerlifting and strength coach in Newcastle upon Tyne. Online and in-person coaching for British Powerlifting and IPF lifters."
+description: "Hollie Johnson — qualified powerlifting and strength coach in Newcastle upon Tyne. Full online coaching, program design, and in-person coaching for British Powerlifting and IPF lifters."
 image: images/hero.jpg
 imageAltAttribute: "Hollie Johnson powerlifting — competing at a British Powerlifting competition."
 hero_heading: "Get stronger.<br>whatever your<br>circumstances"

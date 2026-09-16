@@ -7,4 +7,4 @@ image:
 enquiry_form_url: "https://docs.google.com/forms/d/e/1FAIpQLSd-FVol752osYhAsL0yaYjgHhTicf_ojxNG19pInoMeFLVL4Q/viewform?usp=dialog"
 ---
 
-Interested in online coaching? Fill in the enquiry form and I'll get back to you. To book a free consultation call, or for anything else, email me or reach out on Instagram.
+Interested in coaching or program design? Fill in the enquiry form and I'll get back to you. To book a free consultation call, or for anything else, email me or reach out on Instagram.

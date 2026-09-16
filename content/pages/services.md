@@ -2,11 +2,21 @@
 title: 'Services'
 url: "/services/"
 layout: services
-description: "Online, hybrid, and in-person powerlifting coaching with Hollie Johnson in Newcastle, North East UK. For competitors and general strength training."
+description: "Full online coaching, hybrid, program design, and in-person powerlifting coaching with Hollie Johnson in Newcastle, North East UK. For competitors and general strength training."
 image: images/competition.jpg
 imageAltAttribute: "Powerlifting competition — British Powerlifting meet"
 tiers:
-  - name: "Online Coaching"
+  - name: "Program Design"
+    price: "£60"
+    period: "/ month"
+    featured: false
+    cta: "Apply"
+    blurb: "Personalised programme designed around your goals, experience level, and available training days. No cookie-cutter templates."
+    features:
+      - "Fully customised programme"
+      - "Designed for your goals & schedule"
+      - "No coaching check-ins"
+  - name: "Full Online Coaching"
     price: "£120"
     period: "/ month"
     featured: true
@@ -25,7 +35,7 @@ tiers:
     cta: "Apply"
     blurb: "The best of both — remote programming plus hands-on technique work."
     features:
-      - "Everything in Online Coaching"
+      - "Everything in Full Online Coaching"
       - "Two 1h in-person sessions per month"
       - "Ideal for new lifters & comp prep"
       - "In-person form checks"
